@@ -1,9 +1,9 @@
 /* Reset some default Bootstrap styles */
 body {
-  background-image: url('https://images.unsplash.com/photo-1624139283078-74a0492f2ee3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2127&q=80');
+  background-image: url('https://images.unsplash.com/photo-1655512318649-8e32533c1c9f?q=80&w=2030&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
   background-repeat: repeat;
   background-color: #f9f9f8;
-  opacity: 75%;
+  opacity: 85%;
 }
 
 /* Hero Section Styles */
@@ -94,6 +94,19 @@ body {
   margin-bottom: 20px;
 }
 
+.project-card .card-title {
+  font-size: 24px; /* Custom font size for titles */
+  font-weight: bold; /* Custom font weight for titles */
+  margin: 12px 0; /* Adjust the spacing */
+  color: #ffffff !important; /* Change the text color to white */
+}
+
+.project-card .card-text {
+  font-size: 16px; /* Custom font size for descriptions */
+  color: #ffffff !important; /* Change the text color to white */
+  margin: 12px 0; /* Adjust the spacing */
+}
+
 .project-card:hover {
   transform: scale(1.02); /* Slight scale-up on hover */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.804); /* Shadow on hover */
@@ -107,6 +120,7 @@ body {
 
 .project-card .card-body {
   padding: 15px; /* Adjust the padding as needed */
+  background-color: #423f3e; /* Change the background color as needed */
 }
 
 .project-card .card-title {
