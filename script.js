@@ -68,13 +68,28 @@ function addScrollAnimations() {
         section.style.transition = `all 0.5s ease ${0.2 * (index + 1)}s`;
     });
 
-    window.addEventListener('scroll', () => {
+    const animateElements = () => {
         animatedSections.forEach((section) => {
             if (isElementInViewport(section)) {
                 section.style.opacity = '1';
                 section.style.transform = 'translateY(0)';
             }
         });
+    };
+
+    // Add scroll animations when the page loads
+    animateElements();
+
+    // Attach a throttled scroll event listener for better mobile performance
+    let isThrottled = false;
+    window.addEventListener('scroll', () => {
+        if (!isThrottled) {
+            isThrottled = true;
+            requestAnimationFrame(() => {
+                animateElements();
+                isThrottled = false;
+            });
+        }
     });
 }
 
@@ -91,17 +106,3 @@ function isElementInViewport(element) {
 
 // Add scroll animations when the page loads
 document.addEventListener('DOMContentLoaded', addScrollAnimations);
-
-// Initialize ScrollMagic controller
-const controller = new ScrollMagic.Controller();
-
-// Add animations for your sections
-document.querySelectorAll('.animated-section').forEach((section) => {
-  const scene = new ScrollMagic.Scene({
-    triggerElement: section,
-    triggerHook: 0.75, // Adjust this as needed
-    reverse: false,
-  })
-    .setClassToggle(section, 'active') // Add 'active' class when section is in view
-    .addTo(controller);
-});
