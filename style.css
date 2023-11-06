@@ -86,7 +86,7 @@ body {
 /* Improved CSS styling for project cards */
 .project-card {
   height: 100%; /* Set a fixed height for all project cards */
-  min-height: 350px; /* Set a minimum height for consistent proportions */
+  min-height: 450px; /* Set a minimum height for consistent proportions */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -106,7 +106,7 @@ body {
 }
 
 .project-card .card-body {
-  padding: 10px; /* Adjust the padding as needed */
+  padding: 15px; /* Adjust the padding as needed */
 }
 
 .project-card .card-title {
