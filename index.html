@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nathan Farquhar-Kay - Web Developer</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#hero">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./images/resume.pdf" target="_blank">Resume & Cover Letter</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#lets-link-up">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="text-white py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-8">
+                    <h1 class="display-3" id="nameText"></h1>
+                    <p class="lead" id="jobText"></p>
+                </div>
+                <div class="col-md-4">
+                    <img src="./images/headshot.JPEG"
+                        alt="Image" class="img-fluid rounded-circle" style="max-width: 350px;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Function to animate text one letter at a time
+        function animateText(textElement, text, interval) {
+            let index = 0;
+            const timer = setInterval(function () {
+                textElement.textContent += text[index];
+                index++;
+                if (index === text.length) {
+                    clearInterval(timer);
+                }
+            }, interval);
+        }
+
+        // Animate the name and job title text after the page loads
+        document.addEventListener('DOMContentLoaded', function () {
+            animateText(document.getElementById("nameText"), "Hey! I'm Nathan Farquhar-Kay", 50);
+            setTimeout(function () {
+                animateText(document.getElementById("jobText"), "A Fullstack Web Developer passionately enthusiastic about crafting web applications. Feel free to scroll through my website and if you have any questions dont hesitate to ask.", 20);
+            }, 1500); // Delay the job title animation
+        });
+    </script>
+
+<!-- Skills Section -->
+<section id="skills-resume-cover" class="py-5">
+    <div class="container">
+        <div class="card bg-white bg-opacity-75 rounded">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <h2>Skills</h2>
+                        <div class="skills-section">
+                            <div class="row justify-content-center"> <!-- Center the row -->
+                                <!-- Skill: HTML -->
+                                <div class="col-6 col-md-3">
+                                    <div class="skill">
+                                        <i class="fab fa-html5"></i> <!-- HTML5 icon -->
+                                        <p class="skill-text">HTML</p>
+                                        <div class="skill-level" id="html-skill-level">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Skill: CSS -->
+                                <div class="col-6 col-md-3">
+                                    <div class="skill">
+                                        <i class="fab fa-css3"></i> <!-- CSS3 icon -->
+                                        <p class="skill-text">CSS</p>
+                                        <div class="skill-level" id="css-skill-level">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Skill: JavaScript -->
+                                <div class="col-6 col-md-3">
+                                    <div class="skill">
+                                        <i class="fab fa-js"></i> <!-- JavaScript icon -->
+                                        <p class="skill-text">JavaScript</p>
+                                        <div class="skill-level" id="javascript-skill-level">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Skill: Node.js -->
+                                <div class="col-6 col-md-3">
+                                    <div class="skill">
+                                        <i class="fab fa-node-js"></i> <!-- Node.js icon -->
+                                        <p class="skill-text">Node.js</p>
+                                        <div class="skill-level" id="node.js-skill-level">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Skill: Express.js -->
+                                <div class="col-6 col-md-3">
+                                    <div class="skill">
+                                        <i class="fab fa-node-js"></i> <!-- Express.js icon -->
+                                        <p class="skill-text">Express.js</p>
+                                        <div class="skill-level" id="express.js-skill-level">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Skill: React -->
+                                <div class="col-6 col-md-3">
+                                    <div class="skill">
+                                        <i class="fab fa-react"></i> <!-- React icon -->
+                                        <p class="skill-text">React</p>
+                                        <div class="skill-level" id="react-skill-level">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Skill: NoSQL -->
+                                <div class="col-6 col-md-3">
+                                    <div class="skill">
+                                        <i class="fas fa-database"></i> <!-- NoSQL icon -->
+                                        <p class="skill-text">NoSQL</p>
+                                        <div class="skill-level" id="nosql-skill-level">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Skill: SQL -->
+                                <div class="col-6 col-md-3">
+                                    <div class="skill">
+                                        <i class="fas fa-database"></i> <!-- SQL icon -->
+                                        <p class="skill-text">SQL</p>
+                                        <div class="skill-level" id="sql-skill-level">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Add more skills here -->
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <!-- About Section -->
+    <section id="about" class="text-white py-5 animated-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="display-4">About Me</h2>
+                    <p>
+                        Hello there! I'm Nathan, and I'm delighted to have you explore my portfolio.
+
+                        I bring with me a distinguished career as a retired military veteran, amassing over 15 years of invaluable expertise in mountain operations, reconnaissance, close surveillance, and helicopter operations. My journey has led me to a new and exciting chapter in the tech sector, where I've discovered a profound passion for web development.
+                        
+                        While my heart lies in front-end work, I'm equally adept at tackling the complexities of back-end development when the need arises.
+                    </p>
+                    <p>
+                        Since embarking on this exciting new chapter in my journey, I've immersed myself in a wide array of technologies and tools. I've become well-versed and proficient in HTML, CSS, JavaScript, Node.js, Express.js, MySQL, NoSQL databases, Sequelize, GraphQL, PWA (Progressive Web Apps), and React.
+                        
+                        I've also had the privilege of working with the MERN (MongoDB, Express.js, React, Node.js) tech stack, further expanding my skill set. I invite you to explore my portfolio and reach out to me – I'm eager to connect and share my work with you.
+                    </p>
+                    
+                </div>
+                <div class="col-lg-6">
+                    <!-- Add any additional content you have here -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-5">
+        <div class="container">
+            <h2 class="text-center text-white">My Projects</h2>
+            <div class="row">
+                <!-- First Project Card -->
+                <div class="col-md-12 mb-12">
+                    <div class="card bg-white bg-opacity-75 rounded fixed-height-card">
+                        <img src="https://images.unsplash.com/photo-1623838787249-939128b5925f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2074&q=80" alt="Project 3" class="card-img-top">
+                        <div class="card-body d-flex flex-column align-items-center">
+                            <h5 class="card-title text-center">Hunt Buddy</h5>
+                            <p class="card-text text-center">Your text & email alert app that does your hunting report so you dont have to</p>
+                            <a href="#" class="btn btn-primary">Try it</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Second Project Card -->
+                <div class="col-md-6 mb-6">
+                    <div class="card bg-white bg-opacity-75 rounded fixed-height-card">
+                        <img src="./images/WeatherApp.png" alt="Project 2" class="card-img-top">
+                        <div class="card-body d-flex flex-column align-items-center">
+                            <h5 class="card-title text-center">Weather App</h5>
+                            <p class="card-text text-center">Stay informed with real-time weather data from your favorite cities. This dynamic web app fetches and displays the 5-day weather forecast using third-party APIs. It provides up-to-the-minute weather updates, keeping you prepared for any forecast.</p>
+                            <a href="https://nathankay89.github.io/weatherapp/" class="btn btn-primary">Try it</a>
+                        </div>
+                    </div>
+                </div>
+
+                
+
+                <!-- Fourth Project Card -->
+                <div class="col-md-6 mb-6">
+                    <div class="card bg-white bg-opacity-75 rounded">
+                        <img src="./images/NotetakerApp.png" alt="Project 1" class="card-img-top">
+                        <div class="card-body d-flex flex-column align-items-center">
+                            <h5 class="card-title text-center">Note Taker App</h5>
+                            <p class="card-text text-center">Create, save, and retrieve notes seamlessly with this handy application. Built with an Express.js back end, it securely manages your notes, storing and retrieving data from a JSON file for easy access and organization.</p>
+                            <a href="https://nates-note-taker-e27c5b696dd7.herokuapp.com/" class="btn btn-primary">Try it</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Fifth Project Card -->
+                <div class="col-md-6 mb-6">
+                    <div class="card bg-white bg-opacity-75 rounded fixed-height-card">
+                        <img src="./images/QuizApp.png" alt="Project 2" class="card-img-top">
+                        <div class="card-body d-flex flex-column align-items-center">
+                            <h5 class="card-title text-center">Coding Quiz App</h5>
+                            <p class="card-text text-center">Prepare for coding assessments and interviews with this browser-based coding quiz. Test your knowledge with multiple-choice questions and sharpen your skills while enjoying a clean, responsive, and polished user interface. Get hands-on experience with dynamic HTML, CSS, and JavaScript</p>
+                            <a href="https://nathankay89.github.io/weatherapp/" class="btn btn-primary">Try it</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sixth Project Card -->
+                <div class="col-md-6 mb-6">
+                    <div class="card bg-white bg-opacity-75 rounded fixed-height-card">
+                        <img src="./images/JateApp.png" alt="Project 3" class="card-img-top">
+                        <div class="card-body d-flex flex-column align-items-center">
+                            <h5 class="card-title text-center">JATE App</h5>
+                            <p class="card-text text-center">A Progressive Web Application (PWA) that serves as a powerful text editor right in your web browser. Enjoy offline access and robust data persistence with IndexedDB, ensuring seamless text editing anytime, anywhere</p>
+                            <a href="https://ancient-hamlet-39487-2db79ac17552.herokuapp.com/ " class="btn btn-primary">Try it</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- Lets Link Up Section -->
+<section id="lets-link-up" class="text-white py-5">
+    <div class="container">
+        <h2 class="text-center">Lets link up</h2>
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <div class="contact-links mb-3 text-center">
+                    <!-- LinkedIn -->
+                    <a href="https://www.linkedin.com/your-linkedin-profile" target="_blank" class="btn btn-primary">
+                        <i class="fab fa-linkedin"></i> LinkedIn
+                    </a>
+                    
+                    <!-- GitHub -->
+                    <a href="https://github.com/nathankay89" target="_blank" class="btn btn-dark">
+                        <i class="fab fa-github"></i> GitHub
+                    </a>
+                </div>
+                
+                <!-- Phone -->
+                <p class="card-text text-center">
+                    <i class="fas fa-phone fa-2x"></i>
+                    Call me at: <span id="phone" class="hidden">1-249-879-6352</span>
+                    <a href="#" id="showPhone">Show Phone</a>
+                </p>
+
+                <!-- Email -->
+                <p class="card-text text-center">
+                    <i class="fas fa-envelope fa-2x"></i>
+                    Email me at: <span id="email" class="hidden">nathankay89@hotmail.com</span>
+                    <a href="#" id="showEmail">Show Email</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <script src="script.js"></script>
+    <!-- Bootstrap JS, Popper.js, and jQuery -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.10.2/umd/popper.min.js"></script>
+</body>
+
+</html>

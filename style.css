@@ -1,0 +1,116 @@
+/* Reset some default Bootstrap styles */
+body {
+  background-image: url('https://images.unsplash.com/photo-1624139283078-74a0492f2ee3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2127&q=80');
+  background-repeat: repeat;
+  background-color: #f9f9f8;
+  opacity: 75%;
+}
+
+/* Hero Section Styles */
+#hero {
+  position: relative;
+  height: 70vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: left;
+  color: #ecf1eb;
+}
+
+.hero-bg {
+  object-fit: cover;
+  object-position: center;
+  height: 300px;
+  width: 100%;
+}
+
+.hero-content {
+  position: absolute;
+  top: 60%;
+
+}
+
+.hero-large-text {
+  font-size: 6rem;
+  margin-bottom: 20px;
+}
+
+.hero-small-text {
+  font-size: 1.5rem;
+}
+
+/* Custom styles for skills section */
+.skills-section {
+  margin-top: 20px;
+  text-align: center;
+}
+
+/* Custom styles for individual skills */
+.skill {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.skill i {
+  font-size: 24px;
+  margin-right: 20px;
+}
+
+.skill-text {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 10px;
+}
+
+
+/* Centered the "Projects" section text */
+#projects h2 {
+  text-align: center;
+  color: #FFFFFF;
+  padding-bottom: 20px;
+}
+
+/* Center the row */
+.skills-section .row.justify-content-center {
+  text-align: center;
+}
+
+/* Style for skill icons */
+.skill i {
+  font-size: 25px; /* Adjust the font size as needed */
+  color: #060607; /* Change the color as needed */
+}
+
+/* Style for mini icons */
+.skill-level i {
+  font-size: 10px; /* Adjust the font size as needed */
+  color: #247029; /* Change the color as needed */
+  margin-right: 10px; /* Adjust the spacing between mini icons */
+}
+
+/* Additional CSS styling as needed */
+.fixed-height-card {
+  height: 100%; /* Adjust the height as needed */
+}
+
+.card {
+  /* Set a minimum height for the card to maintain proportions */
+  min-height: 300px; /* Adjust as needed */
+  /* Add padding to center the content vertically */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card-img-top {
+  max-height: 200px; /* Adjust the image height as needed */
+  width: 100%; /* Allow the image to fill the width of the container */
+  object-fit: cover; /* Maintain the image aspect ratio while covering the element */
+}
+
+
+.hidden {
+  display: none;
+}
