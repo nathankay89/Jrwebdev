@@ -91,3 +91,17 @@ function isElementInViewport(element) {
 
 // Add scroll animations when the page loads
 document.addEventListener('DOMContentLoaded', addScrollAnimations);
+
+// Initialize ScrollMagic controller
+const controller = new ScrollMagic.Controller();
+
+// Add animations for your sections
+document.querySelectorAll('.animated-section').forEach((section) => {
+  const scene = new ScrollMagic.Scene({
+    triggerElement: section,
+    triggerHook: 0.75, // Adjust this as needed
+    reverse: false,
+  })
+    .setClassToggle(section, 'active') // Add 'active' class when section is in view
+    .addTo(controller);
+});

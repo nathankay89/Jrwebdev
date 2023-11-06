@@ -114,3 +114,16 @@ body {
 .hidden {
   display: none;
 }
+
+
+.animated-section {
+  opacity: 0; /* Initially hidden */
+  transform: translateY(50px); /* Initially shifted down */
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+.animated-section.active {
+  opacity: 1; /* Fades in when in view */
+  transform: translateY(0); /* Moves up to its original position */
+  transition: transform 0.3s, opacity 0.3s;
+}
