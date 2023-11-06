@@ -27,7 +27,6 @@ body {
 .hero-content {
   position: absolute;
   top: 60%;
-
 }
 
 .hero-large-text {
@@ -64,17 +63,11 @@ body {
   margin: 10px;
 }
 
-
 /* Centered the "Projects" section text */
 #projects h2 {
   text-align: center;
   color: #FFFFFF;
   padding-bottom: 20px;
-}
-
-/* Center the row */
-.skills-section .row.justify-content-center {
-  text-align: center;
 }
 
 /* Style for skill icons */
@@ -90,31 +83,56 @@ body {
   margin-right: 10px; /* Adjust the spacing between mini icons */
 }
 
-/* Additional CSS styling as needed */
-.fixed-height-card {
-  height: 100%; /* Adjust the height as needed */
-}
-
-.card {
-  /* Set a minimum height for the card to maintain proportions */
-  min-height: 300px; /* Adjust as needed */
-  /* Add padding to center the content vertically */
+/* Improved CSS styling for project cards */
+.project-card {
+  height: 100%; /* Set a fixed height for all project cards */
+  min-height: 350px; /* Set a minimum height for consistent proportions */
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
+  transition: transform 0.3s, box-shadow 0.3s; /* Add a transition for hover effects */
+  margin-bottom: 20px;
 }
 
-.card-img-top {
+.project-card:hover {
+  transform: scale(1.02); /* Slight scale-up on hover */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.804); /* Shadow on hover */
+}
+
+.project-card img {
   max-height: 200px; /* Adjust the image height as needed */
   width: 100%; /* Allow the image to fill the width of the container */
   object-fit: cover; /* Maintain the image aspect ratio while covering the element */
 }
 
+.project-card .card-body {
+  padding: 10px; /* Adjust the padding as needed */
+}
+
+.project-card .card-title {
+  font-size: 24px; /* Custom font size for titles */
+  font-weight: bold; /* Custom font weight for titles */
+  margin: 12px 0; /* Adjust the spacing */
+}
+
+.project-card .card-text {
+  font-size: 16px; /* Custom font size for descriptions */
+  color: #555; /* Custom text color */
+  margin: 12px 0; /* Adjust the spacing */
+}
+
+.project-card .btn-primary {
+  margin-top: 20px; /* Align the button at the bottom */
+}
+
+/* Custom button styles on hover */
+.project-card .btn-primary:hover {
+  background-color: #28394b; /* Change button background color on hover */
+}
 
 .hidden {
   display: none;
 }
-
 
 .animated-section {
   opacity: 0; /* Initially hidden */
