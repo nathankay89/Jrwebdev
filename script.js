@@ -45,7 +45,7 @@ for (const skillName in skillProficiency) {
     generateMiniIcons(skillName, skillProficiency[skillName]);
 }
 
-
+document.addEventListener("DOMContentLoaded", function() {
 document.getElementById('showPhone').addEventListener('click', function(event) {
     event.preventDefault(); 
     const phone = document.getElementById('phone');
@@ -59,7 +59,7 @@ document.getElementById('showEmail').addEventListener('click', function(event) {
     email.classList.toggle('hidden');
     this.textContent = email.classList.contains('hidden') ? 'Show Email' : 'Hide Email';
 });
-
+});
 function addScrollAnimations() {
     const animatedSections = document.querySelectorAll('.animated-section');
     animatedSections.forEach((section, index) => {
